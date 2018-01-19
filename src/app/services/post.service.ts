@@ -5,6 +5,7 @@ import { Posts } from '../models/posts.model'
 export class PostService {
 
   private posts = [];
+  private idCount = 4;
 
   constructor()
   {
@@ -33,6 +34,17 @@ export class PostService {
   public getPosts()
   {
     return this.posts;
+  }
+
+  public addPost(newPost)
+  {
+    this.posts.push(new Posts(
+      this.idCount,
+      newPost.title,
+      newPost.text,
+      newPost.created_at
+    ));
+    this.idCount++;
   }
 
 }
