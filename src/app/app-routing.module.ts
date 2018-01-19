@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PostsComponent } from './components/posts/posts.component';
+import { SinglePostComponent } from './components/single-post/single-post.component';
 
 
 const appRoutes: Routes = [
@@ -11,7 +12,11 @@ const appRoutes: Routes = [
   },
   {
     path: 'posts',
-    component: PostsComponent
+    component: PostsComponent,
+  },
+  {
+  path: 'posts/:id',
+  component: SinglePostComponent,
   },
 
 ];
