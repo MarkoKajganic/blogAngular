@@ -48,11 +48,14 @@
       </div>
 
 
+  <button type="submit" class="btn btn-primary"> Add Post </button>
 
   <button type="button" class="btn"
     (click)="postForm.reset()" [disabled]="postForm.form.pristine"> Reset
   </button>
 
+  <button type="button" class="btn"  
+    (click)="preview()" [disabled]="postForm.form.pristine"> Preview
+  </button>
 
-  <button type="submit" class="btn btn-primary"> Add Post </button>
 </form>

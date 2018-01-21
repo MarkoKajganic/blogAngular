@@ -23,14 +23,20 @@ export class PostFormComponent implements OnInit {
   }
 
 
-
-
   submit(newPost)
   {
     this._postService.addPost(newPost);
     this.router.navigate(['/posts']);
   }
 
+  preview()
+  {
+    alert (`Preview of new post
+            Title: ${this.newPost.title}
+            Text: ${this.newPost.text}
+            Created at: ${this.newPost.created_at}
+            `);
+  }
 
 
 
